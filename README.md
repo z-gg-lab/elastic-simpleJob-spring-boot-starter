@@ -24,7 +24,7 @@
 
   * ```properties
     spring.elastic.job.zookeeper=localhost:2181
-    spring.elastic.job.namespace = myJob
+    spring.elastic.job.namespace=myJob
     ```
 
   * ```java
