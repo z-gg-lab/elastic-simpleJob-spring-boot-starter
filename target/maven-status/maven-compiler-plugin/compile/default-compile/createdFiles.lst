@@ -1,5 +1,0 @@
-com\tail\elastic\config\ElasticJobAutoConfiguration.class
-com\tail\elastic\dto\CustomJobDTO.class
-com\tail\elastic\config\ElasticSchedulerInit.class
-com\tail\elastic\annotation\ElasticJobConfig.class
-com\tail\elastic\listener\CommonElasticJobListener.class
