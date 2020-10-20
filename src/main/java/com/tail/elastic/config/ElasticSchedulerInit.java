@@ -15,7 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
+import org.springframework.util.SystemPropertyUtils;
 
 import javax.annotation.Resource;
 
@@ -24,8 +24,6 @@ import javax.annotation.Resource;
  * @author 003364
  */
 public class ElasticSchedulerInit implements ApplicationContextAware, InitializingBean {
-
-    private static final String PREFIX = "$";
 
     @Resource
     private ApplicationContext applicationContext;
@@ -95,9 +93,8 @@ public class ElasticSchedulerInit implements ApplicationContextAware, Initializi
      * @param customJob
      */
     private void parseCorn(CustomJobDTO customJob) {
-        if (customJob.getCron().startsWith(PREFIX)) {
-            String corns = customJob.getCron().substring(customJob.getCron().indexOf("${") + 2, customJob.getCron().lastIndexOf("}"));
-            customJob.setCron(environment.getProperty(corns));
+        if (customJob.getCron().startsWith(SystemPropertyUtils.PLACEHOLDER_PREFIX)) {
+            customJob.setCron(environment.resolvePlaceholders(customJob.getCron()));
         }
     }
 
