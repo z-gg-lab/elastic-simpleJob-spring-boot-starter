@@ -4,7 +4,7 @@
 
 | name                     | 用法                                                         | 作用                             |
 | ------------------------ | ------------------------------------------------------------ | -------------------------------- |
-| @ElasticJobConfig        | @ElasticJobConfig(cron = "0/5 * * * * ?")<br>@ElasticJobConfig(cron = "${corn}") | 配置定时任务crom表达式，支持${}. |
+| @ElasticJobConfig        | @ElasticJobConfig(cron = "0/5 * * * * ?")<br>@ElasticJobConfig(cron = "${cron}") | 配置定时任务cron表达式，支持${}. |
 | JobSettingsAPI           | @Resource<br> private JobSettingsAPI jobSettingsApi;         | 任务操作API.                     |
 | JobOperateAPI            | @Resource<br/> private JobOperateAPI jobOperateApi;          | 任务操作API.                     |
 | JobStatisticsAPI         | @Resource<br/> private JobStatisticsAPI jobStatisticsApi;    | 任务状态展示API.                 |
