@@ -26,3 +26,17 @@
     spring.elastic.job.zookeeper=localhost:2181
     spring.elastic.job.namespace = myJob
     ```
+
+  * ```java
+    @Slf4j
+    @ElasticJobConfig(cron = "0/5 * * * * ?")
+    @Component
+    public class MySimpleJob implements SimpleJob {
+    
+        @Override
+        public void execute(ShardingContext shardingContext) {
+            log.info("======执行任务======");
+        }
+    }
+    ```
+
