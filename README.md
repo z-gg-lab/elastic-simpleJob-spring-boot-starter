@@ -30,7 +30,6 @@
   * ```java
     @Slf4j
     @ElasticJobConfig(cron = "0/5 * * * * ?")
-    @Component
     public class MySimpleJob implements SimpleJob {
     
         @Override
