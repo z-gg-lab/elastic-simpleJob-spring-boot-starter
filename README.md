@@ -1,4 +1,4 @@
-# elastic-simpleJob-spring-boot-starter
+# ![elastic-simpleJob-spring-boot-starter](https://socialify.git.ci/z-gg-lab/elastic-simpleJob-spring-boot-starter/image?font=Inter&language=1&owner=1&stargazers=1&theme=Dark)
 
 #### 提供的组件
 
@@ -13,11 +13,11 @@
 #### 使用starter
 
 * ```xml
-          <dependency>
-              <groupId>com.zhutail</groupId>
-              <artifactId>elastic-simpleJob-springboot-starter</artifactId>
-              <version>0.0.1-SNAPSHOT</version>
-          </dependency>
+      <dependency>
+          <groupId>com.zhutail</groupId>
+          <artifactId>elastic-simpleJob-springboot-starter</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
   ```
 
 * 配置注册中心和任务命名空间
@@ -38,4 +38,3 @@
         }
     }
     ```
-
